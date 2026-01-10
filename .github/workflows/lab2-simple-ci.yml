@@ -1,16 +1,25 @@
-name: Simple CI
+name: Lab2 Simple CI
 
 # When to run this workflow
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab2/**'
+      - '.github/workflows/lab2-simple-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab2/**'
+      - '.github/workflows/lab2-simple-ci.yml'
 
 jobs:
   test:
-    name: Test Application
+    name: Test Lab2 Application
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lab2/simple-cicd-pipeline
     steps:
       # Get the code
       - name: Get Code
