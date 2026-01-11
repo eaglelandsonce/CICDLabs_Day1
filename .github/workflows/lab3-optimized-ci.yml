@@ -100,6 +100,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
+          cache-dependency-path: lab3/simple-cicd-pipeline/package-lock.json
 
   quality:
     runs-on: ubuntu-latest
@@ -152,6 +153,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
+          cache-dependency-path: lab3/simple-cicd-pipeline/package-lock.json
+          cache-dependency-path: lab3/simple-cicd-pipeline/package-lock.json
 
       - name: Cache node_modules
         id: cache-node-modules
