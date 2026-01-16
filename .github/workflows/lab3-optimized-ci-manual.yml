@@ -11,6 +11,7 @@ on:
           - staging
           - production
         default: development
+        
 
 env:
   NODE_VERSION: '18'
